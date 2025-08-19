@@ -59,10 +59,10 @@ Aquí se insertarán las capturas de la aplicación en funcionamiento:
 
 - Interfaz principal con los platos.
 
-[[file:/Users/jvargas/code/ip/prog_2/u1/comidita/_20250818_235202screenshot.png]]
+[[file:_20250818_235202screenshot.png]]
 
 - Simulación de envío del pedido (*ProgressBar*).
-[[file:/Users/jvargas/code/ip/prog_2/u1/comidita/_20250818_235320screenshot.png]]
+[[file:_20250818_235320screenshot.png]]
 
 * Conclusión
 
