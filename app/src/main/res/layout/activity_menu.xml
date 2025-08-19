@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menuLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- PASTEL -->
+    <TextView
+        android:id="@+id/tvNombrePastel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pastel de choclo ($12.000)"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenosPastel" />
+
+    <Button
+        android:id="@+id/btnMenosPastel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="–"
+        app:layout_constraintTop_toTopOf="@id/tvNombrePastel"
+        app:layout_constraintEnd_toStartOf="@+id/tvCantidadPastel"/>
+
+    <TextView
+        android:id="@+id/tvCantidadPastel"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/btnMenosPastel"
+        app:layout_constraintEnd_toStartOf="@+id/btnMasPastel"/>
+
+    <Button
+        android:id="@+id/btnMasPastel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintTop_toTopOf="@id/btnMenosPastel"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtotalPastel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        app:layout_constraintTop_toBottomOf="@id/tvNombrePastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- CAZUELA -->
+    <TextView
+        android:id="@+id/tvNombreCazuela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cazuela ($10.000)"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtotalPastel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenosCazuela"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btnMenosCazuela"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="–"
+        app:layout_constraintTop_toTopOf="@id/tvNombreCazuela"
+        app:layout_constraintEnd_toStartOf="@+id/tvCantidadCazuela"/>
+
+    <TextView
+        android:id="@+id/tvCantidadCazuela"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/btnMenosCazuela"
+        app:layout_constraintEnd_toStartOf="@+id/btnMasCazuela"/>
+
+    <Button
+        android:id="@+id/btnMasCazuela"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        app:layout_constraintTop_toTopOf="@id/btnMenosCazuela"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvSubtotalCazuela"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreCazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Resumen parcial (luego agregamos propina/total acá) -->
+    <TextView
+        android:id="@+id/tvResumen"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total sin propina: $0"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtotalCazuela"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <Switch
+        android:id="@+id/swPropina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incluir propina 10%"
+        app:layout_constraintTop_toBottomOf="@id/tvResumen"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvTotalSinPropina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total sin propina: $0"
+        app:layout_constraintTop_toBottomOf="@id/swPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvMontoPropina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Propina (10%): $0"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalSinPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvTotalConPropina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Total con propina: $0"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvMontoPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Reset / Tomar otro pedido -->
+    <Button
+        android:id="@+id/btnNuevoPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomar otro pedido"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalConPropina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceptar pedido"
+        app:layout_constraintTop_toBottomOf="@id/btnNuevoPedido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <ProgressBar
+        android:id="@+id/pbProcesando"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/btnAceptar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
