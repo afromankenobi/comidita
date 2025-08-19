@@ -55,7 +55,7 @@ Me faltaron las imagenes, lo se. Perdón :(
 :PROPERTIES:
 :ID:       5dd718a0-a9d1-4b4f-80c2-dc33079d1fea
 :END:
-Aquí se insertarán las capturas de la aplicación en funcionamiento:
+Capturas de la aplicación en funcionamiento:
 
 - Interfaz principal con los platos.
 
